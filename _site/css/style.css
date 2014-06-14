@@ -1,0 +1,104 @@
+body {
+	font-size: 20px;
+	font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	line-height: 1.5;
+	background-color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Rockwell, 'Courier Bold', Courier, Georgia, Times, "Times New Roman", serif;
+	margin: 0;
+	text-transform: uppercase;
+	-webkit-text-shadow: 0.05em 0.05em 0.05em rgb(black, 0.4);
+}
+
+h1 {
+	font-size: 60px;
+	letter-spacing: 6px;
+	text-align: center;
+}
+
+h2 {
+	font-size: 40px;
+	position: absolute;
+	top: 50%;
+	text-align: center;
+	-webkit-transform: translateY(-50%);
+	width: 100%;
+	z-index: 2;
+}
+
+.css-animation {
+	left: 40%;
+	margin: 50px 0 50px 0;
+	opacity: 0.8;
+	position: absolute;
+}
+
+.banner {
+	/*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/31787/deer-blur.jpg) no-repeat;*/
+	background: url(http://hdwallpaperswide.com/wp-content/uploads/2014/02/abstract-colorful-background-533x400.jpg) no-repeat;
+	background-position: center center;
+	background-size: cover;
+	height: 400px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.banner:after {
+	background: radial-gradient(ellipse at center, rgba(0,0,0,0) 30%,rgba(0,0,0,1) 100%);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+.content {
+	background: black;
+	-webkit-box-shadow: 0 -1px 2px rgba(black, 0.4);
+	color: #fff;
+	margin-top: 300px;
+	padding: 4% 0 100px;
+	position: relative;
+	width: 100%;
+	z-index: 2;
+}
+
+header p {
+	font-size: 80%;
+}
+
+.content article {
+	margin: 0 auto;
+	max-width: 960px;
+	padding: 40px 30px;
+}
+
+.img {
+	background-attachment: fixed;
+  	background-position: center center;
+  	background-size: cover;
+  	height: 440px;
+  	position: relative;
+  	width: 100%;
+}
+
+.img:after {
+	background: radial-gradient(ellipse at center, rgba(0,0,0,0) 30%,rgba(0,0,0,1) 100%);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.img.trees {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/31787/deer-blur.jpg);
+}
