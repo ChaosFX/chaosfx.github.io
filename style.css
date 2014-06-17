@@ -1,141 +1,133 @@
+html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-	font-size: 20px;
-	font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: 300;
-	line-height: 1.5;
-	background-color: black;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 24px;
+    padding: 0;
+    width: 75%;
+    margin: 0 auto;
+    text-align: left;
+    background-color: #FFF;
+    
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: Rockwell, 'Courier Bold', Courier, Georgia, Times, "Times New Roman", serif;
-	margin: 0;
-	text-transform: uppercase;
-	-webkit-text-shadow: 0.05em 0.05em 0.05em rgb(black, 0.4);
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Code Pro", monospace;
+    font-size: 250%;
+    color: #45B29D;
+    text-shadow: 2px 2px 2px #DF4949;
+    text-transform: uppercase;
 }
 
-h1 {
-	font-size: 60px;
-	color: white;
-	letter-spacing: 6px;
-	text-align: center;
-}
-
-h2 {
-	font-size: 40px;
-	position: absolute;
-	top: 50%;
-	text-align: center;
-	-webkit-transform: translateY(-50%);
-	width: 100%;
-	z-index: 2;
-}
-
-.css-animation {
-	left: 40%;
-	margin: 50px 0 50px 0;
-	opacity: 0.8;
-	position: absolute;
+p, ul, li {
+    padding: 0;
+    margin: 0;
+    text-wrap: break-word;
 }
 
 a:link {
-	color: white;
     text-decoration: none;
+    color: #EFC94C;
+    -webkit-transition: color 0.7s, text-shadow 0.7s;
+    transition: color 0.7s, , text-shadow 0.7s;
 }
 
 a:visited {
-	color: white;
     text-decoration: none;
+    color: #EFC94C;
 }
 
 a:hover {
-	color: coral;
     text-decoration: underline;
+    color: #E27A3F;
+    text-shadow: 2px 2px 2px #EFC94C;
 }
 
 a:active {
-	color: indianred;
     text-decoration: underline;
+    color: #E27A3F;
 }
 
-.header nav ul {
-	 list-style-type: none;
-	 margin: 0;
-	 padding: 0;
+/***
+    color bar
+***/
+
+.colorBar {
+    height: 5px;
+    margin: 0 -1000%;
+    background-color: #DF4949;
+    margin-bottom: 5%;
 }
 
-.header nav ul li {
-	float: left;
-	display: inline;
+/***
+    navigation bar
+***/
+
+nav {
+       
 }
 
-.header nav ul a {
-	color: white;
-	display: block;
-	width: 60px;
+nav ul li.home {
+    font-size: 170%;
+    font-family: "Source Code Pro", monospace;
+    color: #45B29D;
+    text-shadow: 2px 2px 2px #DF4949;
+    text-transform: uppercase;
 }
 
-.banner {
-	background: url(http://hdwallpaperswide.com/wp-content/uploads/2014/02/abstract-colorful-background-533x400.jpg) no-repeat;
-	background-position: center center;
-	background-size: cover;
-	height: 400px;
-	position: fixed;
-	top: 0;
-	width: 100%;
-/*	z-index: 1;
-*/}
-
-.banner:after {
-	background: radial-gradient(ellipse at center, rgba(0,0,0,0) 30%,rgba(0,0,0,1) 100%);
-    content: '';
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 3;
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-.content {
-	background: black;
-	-webkit-box-shadow: 0 -1px 2px rgba(black, 0.4);
-	color: #fff;
-	margin-top: 100px;
-	padding: 4% 0 100px;
-	position: relative;
-	width: 100%;
-	z-index: 2;
+nav ul li {
+    display: inline;
+    margin-right: 30px;
 }
 
-header p {
-	font-size: 80%;
+nav ul li a {
+       
 }
 
-.content article {
-	margin: 0 auto;
-	max-width: 960px;
-	padding: 40px 30px;
+/***
+    article
+***/
+
+article {
+    margin-top: 30px;   
 }
 
-.img {
-	background-attachment: fixed;
-  	background-position: center center;
-  	background-size: cover;
-  	height: 440px;
-  	position: relative;
-  	width: 100%;
+article header p {
+    margin-bottom: 15px;
+    font-size: 65%;
+    color: #45B29D;
 }
 
-.img:after {
-	background: radial-gradient(ellipse at center, rgba(0,0,0,0) 30%,rgba(0,0,0,1) 100%);
-    content: '';
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
+article p {
+    margin-left: 40px;
 }
 
-.img.trees {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/31787/deer-blur.jpg);
+article canvas {
+    border: 5px solid #DF4949;
+    margin: 20px 40px;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 60%;   
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) { 
+    body {
+        width: 100%;
+    }
 }
