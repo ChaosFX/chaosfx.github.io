@@ -18,8 +18,8 @@ Game.Boot.prototype = {
 
 		this.game.stage.backgroundColor = '#4f5d3e';
 
-		game.load.image('loading_frame', 'jumpBoy/assets/loading_frame.png');
-		game.load.image('loading_bar', 'jumpBoy/assets/loading_bar.png');
+		game.load.image('loading_frame', '../../../jumpBoy/assets/loading_frame.png');
+		game.load.image('loading_bar', '../../../jumpBoy/assets/loading_bar.png');
 	},
 
 	create: function () {
@@ -51,23 +51,23 @@ Game.Load.prototype = {
 		loadingBar.x -= loadingBar.width/2;
 		game.load.setPreloadSprite(loadingBar);
 
-		this.game.load.tilemap('map1', 'jumpBoy/levels/Level1.json', null, Phaser.Tilemap.TILED_JSON);
-		this.game.load.tilemap('map2', 'jumpBoy/levels/Level2.json', null, Phaser.Tilemap.TILED_JSON);
-		this.game.load.tilemap('map3', 'jumpBoy/levels/Level3.json', null, Phaser.Tilemap.TILED_JSON);
-		this.game.load.image('tiles', 'jumpBoy/assets/jumpTileSet.png');
+		this.game.load.tilemap('map1', '../../../jumpBoy/levels/Level1.json', null, Phaser.Tilemap.TILED_JSON);
+		this.game.load.tilemap('map2', '../../../jumpBoy/levels/Level2.json', null, Phaser.Tilemap.TILED_JSON);
+		this.game.load.tilemap('map3', '../../../jumpBoy/levels/Level3.json', null, Phaser.Tilemap.TILED_JSON);
+		this.game.load.image('tiles', '../../../jumpBoy/assets/jumpTileSet.png');
 
-		this.game.load.spritesheet('player', 'jumpBoy/assets/jumpMan.png', 10, 16, 2);
-		this.game.load.image('coin', 'jumpBoy/assets/coin.png');
-		this.game.load.image('blade', 'jumpBoy/assets/sawBlade.png');
-		this.game.load.image('door', 'jumpBoy/assets/door.png');
+		this.game.load.spritesheet('player', '../../../jumpBoy/assets/jumpMan.png', 10, 16, 2);
+		this.game.load.image('coin', '../../../jumpBoy/assets/coin.png');
+		this.game.load.image('blade', '../../../jumpBoy/assets/sawBlade.png');
+		this.game.load.image('door', '../../../jumpBoy/assets/door.png');
 
-		this.game.load.audio('jump', 'jumpBoy/assets/sounds/jump.wav');
-		this.game.load.audio('coin', 'jumpBoy/assets/sounds/coin.wav');
-		this.game.load.audio('music', 'jumpBoy/assets/sounds/music.mp3');
-		this.game.load.audio('death', 'jumpBoy/assets/sounds/death.wav');
+		this.game.load.audio('jump', '../../../jumpBoy/assets/sounds/jump.wav');
+		this.game.load.audio('coin', '../../../jumpBoy/assets/sounds/coin.wav');
+		this.game.load.audio('music', '../../../jumpBoy/assets/sounds/music.mp3');
+		this.game.load.audio('death', '../../../jumpBoy/assets/sounds/death.wav');
 
-		this.game.load.bitmapFont('bitmapFont', 'jumpBoy/assets/nokia.png', 'jumpBoy/assets/nokia.xml');
-		this.game.load.image('logo', 'jumpBoy/assets/logo_jump.png');
+		this.game.load.bitmapFont('bitmapFont', '../../../jumpBoy/assets/nokia.png', '../../../jumpBoy/assets/nokia.xml');
+		this.game.load.image('logo', '../../../jumpBoy/assets/logo_jump.png');
 	},
 	
 	loadRender: function () {
