@@ -1,51 +1,17 @@
-<!doctype html>
-<html>
+---
+layout: default
+---
 
-    <head>
-        <meta charset="utf-8">
-        <title>ChasoFX</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    
-    <body>
-    <div class="wrap">
-
-        <div class="colorBar"></div>
-        
-        <nav>
-            <ul>
-                <li class="home"><a href="index.html">ChaosFX</a></li>
-                <li><a href="games.hml">Games</a></li>
-                <li><a href="archive.html">Archive</a></li>
-            </ul>
-        </nav>
-        
-        <div class="content">
+<ul>
+    {% for post in site.posts %}
         <article>
             <header>
-                <h2><a href="2014-06-17-jump-boy.html">My new game</a></h2>
-                <p>posted on the <time>17<sup>th</sup> June</time></p>
+                <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+            <p>{{ post.date | date_to_string }}
             </header>
             <p>
-            I made a small jump'n run game with the "Phaser Framework". It is not finished jet but i would like to get your opinion on it.
+            {{ post.excerpt }}
             </p>
         </article>
-        
-        <article>
-            <header>
-                <h2><a href="#">Blogging like a hacker!</a></h2>
-                <p>posted on the <time>16<sup>th</sup> June</time></p>
-            </header>
-            <p>
-            This is my new and second attempt to start a blog. On this blog I will post all my expirinces I make in my computer sience studies and my attempts of making games.
-            </p>
-        </article>
-        </div>
-        
-        <footer>
-            <p>dominik.lingnau@gmail.com</p>
-        </footer>
-    </div>  
-    </body>
-
-</html>
+    {% endfor %}
+</ul>
