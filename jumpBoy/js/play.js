@@ -40,8 +40,8 @@ Game.Play.prototype = {
 		this.coinSound = game.add.sound('coin');
 		this.jumpSound = game.add.sound('jump');
 		this.deathSound = game.add.sound('death');
-		this.music = this.game.add.sound('music');
-		this.music.play('', 0, 0.5, true);
+		music = this.game.add.sound('music');
+		music.play('', 0, 0.5, true);
 
 		this.loadMap();
 
@@ -198,8 +198,9 @@ Game.Play.prototype = {
 		if (onTheGround) this.canDoubleJump = true;
 
 		if (this.upInputIsActive(5)) {
-			this.jumpSound.play('', 0, 0.3);
+			
 			if (this.canDoubleJump) {
+				this.jumpSound.play('', 0, 0.3);
 				this.player.body.velocity.y = this.JUMP_SPEED;
 				if (!onTheGround) {
 					this.canDoubleJump = false;

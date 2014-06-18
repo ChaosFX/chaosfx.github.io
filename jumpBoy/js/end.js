@@ -15,6 +15,7 @@ Game.End.prototype = {
 
 	update: function () {
 		if (this.cursor.up.isDown) {
+			music.stop();
 			this.game.state.start('Play');
 		}
 	},
