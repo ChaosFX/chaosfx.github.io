@@ -125,7 +125,7 @@ Game.Play.prototype = {
         this.door.forEach(function(door) {
 			door.alpha = 0.4;
 
-			game.physics.arcade.enable(door);
+			this.game.physics.arcade.enable(door);
 			door.body.allowGravity = false;
 			door.body.setSize(2, 2, 8, 8);
 		}, this);
@@ -135,7 +135,7 @@ Game.Play.prototype = {
             coin.anchor.setTo(0.5, 0.5);
             coin.x += coin.width;
             coin.y += coin.width / 2;
-			game.physics.arcade.enable(coin);
+			this.game.physics.arcade.enable(coin);
 			coin.body.allowGravity = false;
 			var animation = game.add.tween(coin).to({ y:"-5"}, 400).to({ y:"+5"}, 400);
 			animation.loop(true).start();
@@ -145,7 +145,7 @@ Game.Play.prototype = {
 		console.log('Total Coins: ' + this.totalCoins);
 
 		this.enemies.forEach(function(enemy) {
-			game.physics.arcade.enable(enemy);
+			this.game.physics.arcade.enable(enemy);
 			enemy.body.allowGravity = false;
 			enemy.body.setSize(12, 12, 2, 2);
 
@@ -168,7 +168,7 @@ Game.Play.prototype = {
 		}
 		this.coinSound.play();
 		coin.alive = false;
-		var animation = game.add.tween(coin.scale).to({ x: 0, y: 0}, 300).start();
+		var animation = this.game.add.tween(coin.scale).to({ x: 0, y: 0}, 300).start();
 		animation.onComplete.add(function() { this.destroy(); }, coin);
 		this.coinsPickedUp += 1;
 		console.log('Coins ' + this.coinsPickedUp + ' / ' + this.coins.countDead());
