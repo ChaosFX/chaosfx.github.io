@@ -12,7 +12,7 @@ window.onload = function () {
   game.state.add('menu', require('./states/menu'));
   game.state.add('play', require('./states/play'));
   game.state.add('preload', require('./states/preload'));
-  
+
 
   game.state.start('boot');
 };
@@ -77,7 +77,7 @@ module.exports = GameOver;
         'is in our thoughts of the future.',
         'It\'s a product of our imagination',
         'causing us to fear',
-        'that do not at presant',
+        'that do not at present',
         'or may never exist.',
         'That is near insanity.',
         'Do not missunderstand me',
